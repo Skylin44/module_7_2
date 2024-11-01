@@ -1,5 +1,3 @@
-
-import io
 from pprint import pprint
 
 
@@ -8,8 +6,8 @@ def custom_write(file_name, strings):
     file = open(file_name, 'w', encoding='utf-8')
     strings_positions = {}
     for i, string in enumerate(strings):
-        file.write(string + '\n')
-        strings_positions[(i + 1, file.tell() - len(string) - 1)] = string
+         strings_positions[(i + 1, file.tell())] = string
+         file.write(string + '\n')
     return strings_positions
 
 
